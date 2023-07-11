@@ -7,32 +7,18 @@
 <body>
   <p class="title">Rock Paper Scissors</p>
   
-  <button onclick="
-          endResult('Rock');
-  " class="cssButton"><img src="images/Rock-emoji.png" class="iconHand"></button>
+  <button class="cssButton rockButton"><img src="images/Rock-emoji.png" class="iconHand"></button>
 
-  <button onclick="
-          endResult('Paper');
-  " class="cssButton"><img src="images/Paper-emoji.png" class="iconHand"></button>
+  <button class="cssButton paperButton"><img src="images/Paper-emoji.png" class="iconHand"></button>
 
-  <button onclick="
-          endResult('Scissors');
-  " class="cssButton"><img src="images/Scissors-emoji.png" class="iconHand"></button>
+  <button class="cssButton scissorsButton"><img src="images/Scissors-emoji.png" class="iconHand"></button>
 
   <p class="result cssResult"></p>
   <p class="js-move"></p>
   <p class="js-score cssScore"></p>
-  <button onclick="
-        score.Wins = 0;
-        score.Losses = 0;
-        score.Ties = 0;
-        localStorage.removeItem('score'); 
-        updateScore();
-  " class="buttonReset">Reset Score</button>
+  <button class="buttonReset jsButtonReset">Reset Score</button>
 
-  <button onclick="
-        autoPlay();
-  " class="buttonReset js-autoPlay">Auto Play</button>    
+  <button class="buttonReset js-autoPlay jsAutoPlay">Auto Play</button>    
 
   <script src="rockPaperScissors.js">
   </script>

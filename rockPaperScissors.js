@@ -1,9 +1,36 @@
+
 let score = JSON.parse(localStorage.getItem('score')) || {
   Wins : 0,
   Losses : 0,
   Ties : 0
 }; 
 updateScore();
+
+const rockButton = document.querySelector('.rockButton');
+const paperButton = document.querySelector('.paperButton');
+const scissorsButton = document.querySelector('.scissorsButton');
+const buttonReset = document.querySelector('.jsButtonReset');
+const autoPlayButton = document.querySelector('.jsAutoPlay');
+rockButton.addEventListener('click',()=>{
+  endResult('Rock');
+});
+paperButton.addEventListener('click',()=>{
+  endResult('Paper');
+});
+scissorsButton.addEventListener('click',()=>{
+  endResult('Scissors');
+});
+buttonReset.addEventListener('click',()=>{
+        score.Wins = 0;
+        score.Losses = 0;
+        score.Ties = 0;
+        localStorage.removeItem('score'); 
+        updateScore();
+});
+autoPlayButton.addEventListener('click',()=>{
+  autoPlay();
+})
+
 
 let isPlaying = false;
 let intervalId;
